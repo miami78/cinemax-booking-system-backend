@@ -3,7 +3,8 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { createConn } from "./Utils/dbConnection";
-
+import { homeRouter } from "./routes/index";
+import { BASE_URL } from "./Utils/constants";
 class App {
   public app: express.Application;
 
@@ -19,6 +20,7 @@ class App {
     this.app.use(bodyParser.json());
     this.app.use(cookieParser());
     this.app.use(bodyParser.urlencoded({ extended: false }));
+    this.app.use(BASE_URL, homeRouter);
     this.app.use(cors());
   }
 }
