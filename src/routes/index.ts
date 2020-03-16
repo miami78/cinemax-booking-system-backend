@@ -1,5 +1,5 @@
 import { Response, Request, Router } from "express";
-import prompt from "../Utils/apiResponses";
+import prompt from "../utils/apiResponses";
 
 const homeRouter = Router();
 homeRouter.get("/", (req: Request, res: Response) => {
