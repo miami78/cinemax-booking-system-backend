@@ -2,9 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import { createConn } from "./Utils/dbConnection";
+import { createConn } from "./utils/dbConnection";
 import { homeRouter } from "./routes/index";
-import { BASE_URL } from "./Utils/constants";
+import { BASE_URL } from "./utils/constants";
 class App {
   public app: express.Application;
 
